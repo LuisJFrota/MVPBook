@@ -16,6 +16,10 @@ router.get('/register', (req,res) => {
     res.render('userregister.ejs')
 })
 
+router.get('/bookregister', (req,res) => {
+    res.render('bookregister.ejs')
+})
+
 router.get('/login', (req,res) => {
     res.render('login.ejs')
 })
