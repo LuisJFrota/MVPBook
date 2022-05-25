@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <Header>
-    <nav class="navbar navbar-light bg-light">       
+    <nav class="navbar navbar-light bg-light">     
         <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Digite sua cidade" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
@@ -23,8 +23,8 @@
         <aside class="col-sm-4">
         <div class="card">
             <article class="card-body">
-            <a href="http://localhost:3000/login" class="float-right btn btn-outline-primary">Login</a>
-            <h4 class="card-title mb-4 mt-1">Cadastrar</h4>
+            <a href="http://localhost:3000/register" class="float-right btn btn-outline-primary">Cadastrar</a>
+            <h4 class="card-title mb-4 mt-1">Entrar</h4>
             <form action="userregister" method="post">
                 <div class="form-group">
                     <label >Digite seu email</label>
@@ -33,16 +33,9 @@
                 <div class="form-group">
                     <label>Digite sua senha</label>
                     <input name="password" class="form-control" id="password" type="password" placeholder="Senha"/>
-                </div>
-                <div class="form-group">
-                    <label>Selecione sua localidade:</label>
-                    <select name="locality" id="locality">
-                        <option value="iguatu">Iguatu</option>
-                        <option value="ico">Ico</option>
-                    </select>
-                </div>                   
+                </div>           
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block"> Cadastrar </button>
+                        <button type="submit" class="btn btn-primary btn-block"> Entrar </button>
                     </div>                   
             </form>      
         </div>
