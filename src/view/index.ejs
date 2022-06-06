@@ -22,20 +22,26 @@
     </nav>
     <hr class="mt-2 mb-3">
 <body>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <%for(books of Books){%>
-            <div class="card" style="width: 18rem;">     
-                    <img class="card-img-top" style="height: 300px; width: 300px" src="uploads/<%=books.img%>" alt="Card image cap">                   
-                <div class="card-body">
-                    <h5 class="card-title"><%=books.name%></h5>
-                     <p class="card-text"><%=books.contact%></p>
+    <div class="container">
+        <div class="row row-cols-4">
+            <%for(books of Books){%>     
+                <div class="col py-3">
+                    <div class="card" style="width: 18rem;">     
+                        <img class="card-img-top" style="height: 290px; width: 100%" src="uploads/<%=books.img%>" alt="Card image cap">                   
+                    <div class="card-body">
+                        <h5 class="card-title"><%=books.name%></h5>
+                         <p class="card-text"><%=books.contact%></p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="text-muted">
+                            <%=books.locality%>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <%}%>
-        </div>
-    </div>       
-    </div>
+            </div>          
+            <%}%>             
+        </div> 
+    </div>         
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script>

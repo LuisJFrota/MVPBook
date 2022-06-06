@@ -32,25 +32,25 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
 
 router.get('/', (req,res) => {
-    Book.find().exec((err,docs) => {
+    Book.find().sort({date: -1}).exec((err,docs) => {
         res.render('index.ejs', {Books : docs})
     })
 })
 
 router.get('/feed/:id', (req,res) => {
-    Book.find({locality: {$regex: '^' + req.params.id, $options: 'i'}}).exec((err,docs) => {
+    Book.find({locality: {$regex: '^' + req.params.id, $options: 'i'}}).sort({date: -1}).exec((err,docs) => {
         res.render('index.ejs', {Books : docs})
     })
 })
 
 router.get('/logged', eAdmin, (req,res) => {
-    Book.find().exec((err,docs) => {
+    Book.find().sort({date: -1}).exec((err,docs) => {
         res.render('logged_feed.ejs', {Books : docs})
     })
 })
 
 router.get('/logged/:id', eAdmin, (req,res) => {
-    Book.find({locality: {$regex: '^' + req.params.id, $options: 'i'}}).exec((err,docs) => {
+    Book.find({locality: {$regex: '^' + req.params.id, $options: 'i'}}).sort({date: -1}).exec((err,docs) => {
         res.render('logged_feed.ejs', {Books : docs})
     })
 })
@@ -91,7 +91,7 @@ router.post('/bookregister', upload.single('file'), (req,res) => {
 
     new Book(bookData).save().then(() => {
         console.log("livro registrado")
-        res.send('upou')
+        res.redirect('/')
     }).catch((err) => {
         console.log("erro ao registrar livro")
     })
