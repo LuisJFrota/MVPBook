@@ -7,7 +7,7 @@ const BookSchema = Schema({
         require: true
     },
     img: {
-        data: Buffer,
+        type: String,
         require: false
     },
     contact: {
@@ -15,6 +15,10 @@ const BookSchema = Schema({
         require: true
     },
     owner: {
+        type: String,
+        require: true
+    },
+    locality: {
         type: String,
         require: true
     }

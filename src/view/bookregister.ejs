@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container">
+    <div class="row d-flex justify-content-center">
+        <aside class="col-sm-4">
+        <div class="card">
+            <article class="card-body">
+            <h4 class="card-title mb-4 mt-1">Registrar livro</h4>
+            <form action="bookregister" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <label >Digite o nome do livro</label>
+                    <input name="name" class="form-control" id="name" type="name" placeholder="Nome do livro"/>
+                </div>
+                <div class="form-group">
+                    <label>Digite seu contato</label>
+                    <input name="contact" class="form-control" id="contact" type="tel" placeholder="Contato"/>
+                </div>   
+                <div class="custom-file">
+                    <label>Adicione uma foto do livro!</label>
+                    <input name="file" id="file" type="file">
+                </div>        
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block"> Entrar </button>
+                    </div>                   
+            </form>      
+        </div>
+        </article>
+    </div>
+    </aside>
+</div>
 </body>
 </html>

@@ -1,6 +1,10 @@
 const express = require('express')
+const session = require('express-session')
 const app = express()
 const PORT = 3000
+
+const passport = require('passport')
+require('./config/auth')(passport)
 
 const ejs = require('ejs')
 
@@ -10,6 +14,14 @@ const admin = require('./routes/admin')
 
 const path = require('path')
 
+
+app.use(session({
+    secret: "booktrade123",
+    resave: true,
+    saveUninitialized: true
+}))
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())

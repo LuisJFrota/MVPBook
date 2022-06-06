@@ -15,9 +15,12 @@
         </div>
         <div class="col-auto">
             <input class="form-control mr-sm-2" type="search" id="searchfield" name="searchfield" placeholder="Digite sua cidade" aria-label="Search">
-        </div>     
+        </div>
         <div class="navbar-brand px-2">
-            <a href="http://localhost:3000/login" class="btn btn-outline-danger my-2">Entrar</a>
+            <a class="btn btn-outline-success my-2">Registrar Livro</a>
+        </div>    
+        <div class="navbar-brand px-2">
+            <a href="http://localhost:3000/logout" class="btn btn-outline-danger my-2">Sair</a>
         </div>
     </nav>
     <hr class="mt-2 mb-3">
@@ -30,6 +33,7 @@
                 <div class="card-body">
                     <h5 class="card-title"><%=books.name%></h5>
                      <p class="card-text"><%=books.contact%></p>
+                     <p><%=books.img%></p>
                 </div>
             </div>
             <%}%>
