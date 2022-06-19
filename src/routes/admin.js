@@ -82,6 +82,7 @@ router.post('/userlogin', (req,res, next) => {
 })
 
 router.post('/bookregister', upload.single('file'), (req,res) => {
+
     const bookData = {
         name: req.body.name,
         contact: req.body.contact,
@@ -91,7 +92,7 @@ router.post('/bookregister', upload.single('file'), (req,res) => {
 
     new Book(bookData).save().then(() => {
         console.log("livro registrado")
-        res.redirect('/')
+        res.redirect('/logged')
     }).catch((err) => {
         console.log("erro ao registrar livro")
     })
@@ -115,7 +116,7 @@ router.post('/userregister', (req,res) => {
 
             new User(userData).save().then(() => {
                 console.log("usuario registrado")
-                res.redirect('/')
+                res.redirect('/login')
             }).catch((err)=> {
                 console.log("erro ao registrar usuário")
             })

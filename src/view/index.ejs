@@ -9,36 +9,36 @@
 </head>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand px-2" href="http://localhost:3000/login">
-                <img src="logo.png" width="50" height="50" alt="logo"> 
+            <a class="navbar-brand px-2" href="http://localhost:4000/">
+                <img src="/img/icon.png" width="50" height="50" alt="logo"> 
             </a>
         </div>
         <div class="col-auto">
             <input class="form-control mr-sm-2" type="search" id="searchfield" name="searchfield" placeholder="Digite sua cidade" aria-label="Search">
         </div>     
         <div class="navbar-brand px-2">
-            <a href="http://localhost:3000/login" class="btn btn-outline-danger my-2">Entrar</a>
+            <a href="http://localhost:4000/login" class="btn btn-outline-danger my-2">Entrar</a>
         </div>
     </nav>
     <hr class="mt-2 mb-3">
-<body>
+<body class="bg-light m">
     <div class="container">
-        <div class="row row-cols-4">
+        <div class="row row-cols-3">
             <%for(books of Books){%>     
-                <div class="col py-3">
+                <div class="col py-5">
                     <div class="card" style="width: 18rem;">     
                         <img class="card-img-top" style="height: 290px; width: 100%" src="uploads/<%=books.img%>" alt="Card image cap">                   
-                    <div class="card-body">
-                        <h5 class="card-title"><%=books.name%></h5>
-                         <p class="card-text"><%=books.contact%></p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="text-muted">
-                            <%=books.locality%>
+                        <div class="card-body">
+                            <h5 class="card-title"><%=books.name%></h5>
+                            <p class="card-text"><%=books.contact%></p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="text-muted">
+                                <%=books.locality%>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>          
+                </div>         
             <%}%>             
         </div> 
     </div>         
@@ -51,7 +51,7 @@
         if(e.key === "Enter")
         {
             event.preventDefault()
-            location = "http://localhost:3000/feed/"+search.value
+            location = "http://localhost:4000/feed/"+search.value
         }  
     })
 </script>

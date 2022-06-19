@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Document</title>
 </head>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand px-2" href="http://localhost:4000/logged">
+            <img src="/img/icon.png" width="50" height="50" alt="logo"> 
+        </a>
+    </div>
+    <div class="col-auto">
+        <input class="form-control mr-sm-2" type="search" id="searchfield" name="searchfield" placeholder="Digite sua cidade" aria-label="Search">
+    </div>
+    <div class="navbar-brand px-2">
+        <a href="http://localhost:4000/bookregister" class="btn btn-outline-success my-2">Registrar Livro</a>
+    </div>    
+    <div class="navbar-brand px-2">
+        <a href="http://localhost:4000/logout" class="btn btn-outline-danger my-2">Sair</a>
+    </div>
+</nav>
+<hr class="mt-2 mb-3">
 <body>
     <div class="container">
     <div class="row d-flex justify-content-center">
@@ -17,15 +34,15 @@
             <form action="bookregister" enctype="multipart/form-data" method="post">
                 <div class="form-group">
                     <label >Digite o nome do livro</label>
-                    <input name="name" class="form-control" id="name" type="name" placeholder="Nome do livro"/>
+                    <input name="name" class="form-control" id="name" type="name" placeholder="Nome do livro" required/>
                 </div>
                 <div class="form-group">
                     <label>Digite seu contato</label>
-                    <input name="contact" class="form-control" id="contact" type="tel" placeholder="Contato"/>
+                    <input name="contact" class="form-control" id="contact" type="tel" placeholder="Contato" required/>
                 </div>   
-                <div class="custom-file">
-                    <label>Adicione uma foto do livro!</label>
-                    <input name="file" id="file" type="file">
+                <div class="py-2">
+                    <label class="form-label">Adicione uma foto do livro!</label>
+                    <input class="form-control" name="file" id="file" type="file" required>
                 </div>        
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block"> Entrar </button>
@@ -37,4 +54,5 @@
     </aside>
 </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>
