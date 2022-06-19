@@ -2,9 +2,7 @@ const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise
 
-//mongodb://localhost:27017/BookDB
-//mongodb+srv://admin:admin@mvpbook.tbwu0zb.mongodb.net/?retryWrites=true&w=majority
-mongoose.connect("mongodb://localhost:27017/BookDB",
+mongoose.connect("mongodb+srv://admin:admin@mvpbook.tbwu0zb.mongodb.net/?retryWrites=true&w=majority",
 {
     useNewUrlParser: true,
     useUnifiedTopology: true
